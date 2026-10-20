@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>বয়স ক্যালকুলেটর (Age Calculator)</title>
+    <title>বয়স ক্যালکুলেটর - সঠিক বয়স জানুন নিমিষেই</title>
     <style>
         * {
             box-sizing: border-box;
@@ -13,11 +13,18 @@
         }
         body {
             background-color: #f4f7f6;
+            color: #2c3e50;
+            line-height: 1.6;
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .main-content {
+            flex: 1;
             display: flex;
             justify-content: center;
             align-items: center;
-            min-height: 100vh;
-            padding: 15px;
         }
         .container {
             background: #ffffff;
@@ -25,12 +32,13 @@
             border-radius: 12px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
             width: 100%;
-            max-width: 450px;
+            max-width: 500px;
         }
-        h2 {
+        h1 {
             text-align: center;
             color: #2c3e50;
             margin-bottom: 20px;
+            font-size: 24px;
         }
         .input-group {
             margin-bottom: 20px;
@@ -87,37 +95,80 @@
             color: #777;
             font-size: 12px;
         }
+        .seo-text {
+            margin-top: 30px;
+            font-size: 14px;
+            color: #555;
+            border-top: 1px solid #eee;
+            padding-top: 15px;
+        }
+        .seo-text h3 {
+            font-size: 16px;
+            margin-bottom: 8px;
+            color: #333;
+        }
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+            font-size: 13px;
+            color: #777;
+            border-top: 1px solid #ddd;
+        }
+        footer a {
+            color: #3498db;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
 
-<div class="container">
-    <h2>বয়স ক্যালকুলেটর</h2>
-    
-    <div class="input-group">
-        <label for="dob">আপনার জন্মতারিখ নির্বাচন করুন:</label>
-        <input type="date" id="dob">
-    </div>
+<div class="main-content">
+    <div class="container">
+        <h1>বয়স ক্যালকুলেটর</h1>
+        
+        <div class="input-group">
+            <label for="dob">আপনার জন্মতারিখ নির্বাচন করুন:</label>
+            <input type="date" id="dob">
+        </div>
 
-    <button onclick="calculateAge()">বয়স হিসাব করুন</button>
+        <button onclick="calculateAge()">বয়স হিসাব করুন</button>
 
-    <div class="result" id="result">
-        <p id="years-months-days"></p>
-        <p id="total-days"></p>
-        <p id="total-hours"></p>
-    </div>
+        <div class="result" id="result">
+            <p id="years-months-days"></p>
+            <p id="total-days"></p>
+            <p id="total-hours"></p>
+        </div>
 
-    <!-- বিজ্ঞাপনের স্থান (গুগল অ্যাডসেন্স কোড এখানে বসবে) -->
-    <div class="ad-space">
-        এখানে বিজ্ঞাপন প্রদর্শিত হবে (Google AdSense)
+        <!-- বিজ্ঞাপনের স্থান (গুগল অ্যাডসেন্স বা অ্যাডস্টার্নার কোড এখানে বসাবেন) -->
+        <div class="ad-space">
+            বিজ্ঞাপনের স্থান (Ad Space)
+        </div>
+
+        <div class="seo-text">
+            <h3>বয়স হিসাব করার সহজ উপায়</h3>
+            <p>আমাদের এই অনলাইন বয়স ক্যালকুলেটর টুলের মাধ্যমে খুব সহজেই আপনার জন্মতারিখ দিয়ে বর্তমান বয়স বছর, মাস, দিন এবং মোট ঘণ্টায় নিখুঁতভাবে বের করে নিতে পারেন। এটি মোবাইল ও কম্পিউটার উভয়েই খুব দ্রুত কাজ করে।</p>
+        </div>
     </div>
 </div>
+
+<footer>
+    <p>&copy; ২০২৬ বয়স ক্যালকুলেটর | সর্বস্বত্ব সংরক্ষিত</p>
+    <p>
+        <a href="#" onclick="alert('আমাদের প্রাইভেসি পলিসি পেজে ভিজিটরদের গোপনীয়তা রক্ষা করা হয়।'); return false;">Privacy Policy</a> | 
+        <a href="#" onclick="alert('যোগাযোগের জন্য আমাদের ইমেইল করতে পারেন।'); return false;">Contact Us</a>
+    </p>
+</footer>
 
 <script>
     function calculateAge() {
         const dobInput = document.getElementById('dob').value;
         if (!dobInput) {
-            alert('কৃপা করে একটি সঠিক জন্মতারিখ নির্বাচন করুন!');
+            alert('দয়া করে একটি সঠিক জন্মতারিখ নির্বাচন করুন!');
             return;
         }
 
