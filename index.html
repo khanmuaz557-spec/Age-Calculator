@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>বয়স ক্যালکুলেটর - সঠিক বয়স জানুন নিমিষেই</title>
+    <title>বয়স ক্যালকুলেটর - সঠিক বয়স জানুন নিমিষেই</title>
     <style>
         * {
             box-sizing: border-box;
@@ -123,6 +123,15 @@
         footer a:hover {
             text-decoration: underline;
         }
+        .visitor-counter {
+            margin-top: 10px;
+            font-size: 12px;
+            color: #555;
+        }
+        .visitor-counter img {
+            margin-top: 5px;
+            vertical-align: middle;
+        }
     </style>
 </head>
 <body>
@@ -144,7 +153,7 @@
             <p id="total-hours"></p>
         </div>
 
-        <!-- বিজ্ঞাপনের স্থান (গুগল অ্যাডসেন্স বা অ্যাডস্টার্নার কোড এখানে বসাবেন) -->
+        <!-- বিজ্ঞাপনের স্থান -->
         <div class="ad-space">
             বিজ্ঞাপনের স্থান (Ad Space)
         </div>
@@ -162,6 +171,14 @@
         <a href="#" onclick="alert('আমাদের প্রাইভেসি পলিসি পেজে ভিজিটরদের গোপনীয়তা রক্ষা করা হয়।'); return false;">Privacy Policy</a> | 
         <a href="#" onclick="alert('যোগাযোগের জন্য আমাদের ইমেইল করতে পারেন।'); return false;">Contact Us</a>
     </p>
+
+    <!-- ভিজিটর কাউন্টার সেকশন -->
+    <div class="visitor-counter">
+        <p>মোট ভিজিটর সংখ্যা:</p>
+        <a href="https://www.freevisitorcounters.com/">
+            <img src="https://www.freevisitorcounters.com/hostedcounters/counter.php?data=b14b8f0d5718a7a0b3a3&type=1&loc=1" border="0" alt="visitor counter">
+        </a>
+    </div>
 </footer>
 
 <script>
